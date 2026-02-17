@@ -2,7 +2,7 @@
 
 Out-of-tree module for the AMD ISP4 camera found in Ryzen AI laptops (e.g., ASUS Zenbook S 16, HP ZBook Ultra G1a).
 
-The driver is not yet merged into mainline Linux. This repo downloads the [patch series](https://lore.kernel.org/linux-media/20251128091929.165272-1-Bin.Du@amd.com/) via `b4` and builds it as a loadable module.
+The driver is not yet merged into mainline Linux. This repo downloads the [patch series](https://lore.kernel.org/linux-media/20260212083426.216430-8-Bin.Du@amd.com/) via `b4` and builds it as a loadable module.
 
 ## Requirements
 
