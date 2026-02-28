@@ -19,4 +19,4 @@ clean:
 	-$(MAKE) -C $(TARGET_DIR) clean
 
 setup:
-	@./setup $(KVER)
+	@./setup.sh $(KVER)
