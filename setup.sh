@@ -5,7 +5,7 @@ set -e
 KVER="${1:-$(uname -r)}"
 TARGET_DIR="linux-$KVER"
 MSG_ID="20260212083426.216430-1-Bin.Du@amd.com"
-PATCHSET_VER="v8"
+PATCHSET_VER="v9"
 
 if [[ -f "$TARGET_DIR/.patched" ]]; then
     echo "Already set up for $KVER"
