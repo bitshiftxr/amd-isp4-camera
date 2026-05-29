@@ -4,12 +4,12 @@ set -e
 
 KVER="${1:-$(uname -r)}"
 TARGET_DIR="linux-$KVER"
-MSG_ID="20260212083426.216430-1-Bin.Du@amd.com"
-PATCHSET_VER="v9"
+MSG_ID="20260320084146.200988-1-Bin.Du@amd.com"
+PATCHSET_VER="v10"
 
 if [[ -f "$TARGET_DIR/.patched" ]]; then
-    echo "Already set up for $KVER"
-    exit 0
+  echo "Already set up for $KVER"
+  exit 0
 fi
 
 echo "Setting up AMD ISP4 driver for kernel $KVER..."
@@ -22,7 +22,7 @@ cd ..
 cp src/drivers/media/platform/amd/isp4/*.c src/drivers/media/platform/amd/isp4/*.h "$TARGET_DIR/"
 rm -rf src ${PATCHSET_VER}_*.mbx ${PATCHSET_VER}_*.cover
 
-cat > "$TARGET_DIR/Makefile" << 'EOF'
+cat >"$TARGET_DIR/Makefile" <<'EOF'
 KVER ?= $(shell uname -r)
 KDIR ?= /lib/modules/$(KVER)/build
 
