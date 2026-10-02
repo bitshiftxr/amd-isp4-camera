@@ -27,8 +27,8 @@ After the phase builds, commit it with `git commit`.
 ### Success Criteria:
 
 #### Automated Verification:
-- [ ] `bash -n scripts/preflight.sh` passes
-- [ ] `scripts/preflight.sh 0.0.0` exits non-zero
+- [x] `bash -n scripts/preflight.sh` passes
+- [x] `scripts/preflight.sh 0.0.0` exits non-zero
 
 #### Manual Verification:
 - [ ] The summary line reads well
@@ -51,8 +51,8 @@ After the phase builds, commit it with `git commit`.
 ### Success Criteria:
 
 #### Automated Verification:
-- [ ] `make -n preflight` prints the script invocation
-- [ ] `make -n setup` runs preflight first
+- [x] `make -n preflight` prints the script invocation
+- [x] `make -n setup` runs preflight first
 
 #### Manual Verification:
 - [ ] The README section is clear
