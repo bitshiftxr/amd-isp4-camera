@@ -29,6 +29,16 @@ make install
 
 This downloads the patches, compiles the module, installs it, loads it, and configures it to load at boot.
 
+## Preflight
+
+Run the prerequisite checks without downloading or building anything:
+
+```bash
+make preflight
+```
+
+The check reports missing tools, kernel headers, and unsupported kernel versions. You can check a different installed kernel with `make preflight KVER=<version>`.
+
 ## After kernel updates
 
 ```bash

@@ -2,7 +2,7 @@
 KVER ?= $(shell uname -r)
 TARGET_DIR := linux-$(KVER)
 
-.PHONY: all install clean setup
+.PHONY: all install clean preflight setup
 
 all: setup
 	$(MAKE) -C $(TARGET_DIR) build
@@ -18,5 +18,8 @@ install: all
 clean:
 	-$(MAKE) -C $(TARGET_DIR) clean
 
-setup:
+preflight:
+	@./scripts/preflight.sh $(KVER)
+
+setup: preflight
 	@./setup.sh $(KVER)
